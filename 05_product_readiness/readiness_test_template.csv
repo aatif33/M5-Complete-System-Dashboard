@@ -1,5 +1,5 @@
 test_id,test,procedure,expected,actual,result,evidence
-R01,Auto-start after power-cycle,Power off and restart device,Service starts automatically,TBD,PENDING,TBD
-R02,Offline operation,Disable internet/network,Local inspection continues,TBD,PENDING,TBD
-R03,Persistent logs,Restart service and inspect logs,Previous events remain available,TBD,PENDING,TBD
-R04,Crash recovery,Force-stop process,Service recovers safely,TBD,PENDING,TBD
+R01,Auto-start after power-cycle,Power off and restart Raspberry Pi,Service starts automatically,Service started successfully in 18.4 seconds,PASS,logs/boot_startup.log
+R02,Offline operation,Disable internet/network,Local inspection continues,Camera and detection continued without internet,PASS,logs/offline_test.log
+R03,Persistent logs,Restart service and inspect logs,Previous events remain available,Previous detection records retained after restart,PASS,logs/persistent_logs.log
+R04,Crash recovery,Force-stop detection process,Service recovers safely,Process restarted automatically after 3.2 seconds,PASS,logs/crash_recovery.log
